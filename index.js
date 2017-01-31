@@ -1,3 +1,6 @@
+const title = React.createElement('h1', {}, 'My First React Code');
+const paragraph = React.createElement('p', {}, 'Writing some more HTML. Cool stuff!');
+const container = React.createElement('div', {}, [title, paragraph]);
 const list =
   React.createElement('div', {},
     React.createElement('h1', {}, 'My favorite ice cream flavors'),
@@ -8,5 +11,6 @@ const list =
         React.createElement('li', { class: 'yellow' }, 'Banana')
       ]
     ));
-
+ReactDOM.render(title, document.getElementById('main'));
+ReactDOM.render(container, document.getElementById('main'));
 ReactDOM.render(list, document.getElementById('main'));
